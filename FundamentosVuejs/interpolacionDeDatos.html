@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- {{ text }} -->
+    </div>
+    <script>
+        const vm = Vue.createApp({
+            data() {
+                return {
+                    text: "<p>Hola Vue</p>"
+                };
+            },
+            template:`<div v-html="text"></div>`
+        }).mount("#app")
+        //console.log(vm)
+        //v-on te permite que no se modifique el texto y que quede con el primero que se agrego
+        //v-html te permite que le envies codigo html 
+    </script>
+</body>
+</html>
